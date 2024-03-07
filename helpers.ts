@@ -2,20 +2,20 @@ const helpers = {
   // @ts-ignore
   friendlyDate: function (a) {
     var months = [
-      'Jan',
+      'Ene',
       'Feb',
       'Mar',
-      'Apr',
+      'Abr',
       'May',
       'Jun',
       'Jul',
-      'Aug',
+      'Ago',
       'Sep',
       'Oct',
       'Nov',
-      'Dec',
+      'Dic',
     ];
-    var days = ['Sun', 'Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat'];
+    var days = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
     var year = a.getFullYear();
     var month = months[a.getMonth()];
     var day = days[a.getDay()];

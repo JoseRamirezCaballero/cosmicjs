@@ -49,7 +49,7 @@ export default function PostCard({ post }: { post: Post }) {
       <div className="flex items-center justify-between font-medium text-green-600 dark:text-green-200">
         <Link href={`/posts/${post.slug}`}>
           <div className="flex items-center space-x-2">
-            <span>Read more</span>
+            <span>Leer más</span>
             <ArrowRight className="h-4 w-4 text-inherit" />
           </div>
         </Link>

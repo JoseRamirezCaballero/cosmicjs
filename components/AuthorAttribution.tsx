@@ -8,7 +8,7 @@ export default function AuthorAttribution({
 }): JSX.Element {
   return (
     <div className="flex space-x-1">
-      <span>by</span>
+      <span>Por</span>
       <a
         href={`/author/${post.metadata.author?.slug}`}
         className="font-medium text-green-600 dark:text-green-200"
@@ -16,7 +16,7 @@ export default function AuthorAttribution({
         {post.metadata.author?.title}
       </a>
       <span>
-        on {helpers.stringToFriendlyDate(post.metadata.published_date)}
+        en {helpers.stringToFriendlyDate(post.metadata.published_date)}
       </span>
     </div>
   );

@@ -7,7 +7,7 @@ export default async function Page(): Promise<JSX.Element> {
 
     return (
         <main className="mx-auto mt-24 w-full max-w-3xl flex-col space-y-16 px-4 lg:px-0">
-            {!posts && 'Debes agregar al menos una publicación a tu Bucket'}
+            {!posts && 'Debes agregar al menos una publicación'}
             {posts &&
                 posts.map((post) => {
                     return (

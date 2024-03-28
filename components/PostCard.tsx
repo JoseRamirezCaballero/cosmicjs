@@ -36,7 +36,9 @@ export default function PostCard({ post }: { post: Post }) {
         <div className="flex select-none justify-start space-x-2 md:hidden md:justify-end">
           {post.metadata.categories &&
             post.metadata.categories.map((category) => (
-              <Tag key={category.title}>{category.title}</Tag>
+              category.title !== 'Noticias' && (
+                <Tag key={category.title}>{category.title}</Tag>
+              )
             ))}
         </div>
       </div>

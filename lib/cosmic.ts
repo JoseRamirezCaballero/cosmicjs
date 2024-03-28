@@ -50,6 +50,44 @@ export async function getAllPosts(): Promise<Post[]> {
   return Promise.resolve([]);
 }
 
+export async function getAllAuthors(): Promise<Author[]> {
+  try {
+    // Get all authors
+    const data: any = await Promise.resolve(
+      cosmic.objects
+        .find({
+          type: 'authors',
+        })
+        .props("slug,title,metadata")
+        .depth(1)
+    );
+    const authors: Author[] = await data.objects;
+    return Promise.resolve(authors);
+  } catch (error) {
+    console.log('Oof', error);
+  }
+  return Promise.resolve([]);
+}
+
+export async function getAllWorkers(): Promise<any[]> {
+  try {
+    // Get all workers
+    const data: any = await Promise.resolve(
+      cosmic.objects
+        .find({
+          type: 'workers',
+        })
+        .props("slug,title,metadata")
+        .depth(1)
+    );
+    const workers: any[] = await data.objects;
+    return Promise.resolve(workers);
+  } catch (error) {
+    console.log('Oof', error);
+  }
+  return Promise.resolve([]);
+}
+
 export async function getPost({
   params,
 }: {

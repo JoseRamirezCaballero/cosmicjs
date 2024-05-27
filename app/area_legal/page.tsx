@@ -34,7 +34,7 @@ export default function Page() {
 
     return (
         <section
-            className="h-screen relative"
+            className="h-screen relative flex items-center justify-center"
             style={{
                 backgroundImage: `url('${posts[currentPostIndex]?.metadata.hero?.imgix_url}')`,
                 backgroundPosition: 'center',

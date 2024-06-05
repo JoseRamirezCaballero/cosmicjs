@@ -9,7 +9,7 @@ export async function generateMetadata({
 }) {
   const author = await getAuthor({ params });
   return {
-    title: `${author.title} posts | Simple React Blog`,
+    title: `${author.title} posts | Blog`,
   };
 }
 
@@ -23,7 +23,7 @@ export default async ({ params }: { params: { id: string; slug: string } }) => {
         Publicaciones por {author.title}
       </h1>
       <div className="space-y-16">
-        {!posts && 'You must add at least one Post to your Bucket'}
+        {!posts && 'Debes agregar al menos una publicación'}
         {posts &&
           posts.map((post) => {
             return (

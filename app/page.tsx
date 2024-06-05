@@ -48,7 +48,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="flex h-screen gap-6 pt-24 pb-10 px-10 bg-white">
+      <div className="flex flex-col md:flex-row h-screen gap-6 pt-24 pb-10 px-10 bg-white">
         <section className="bg-gray-700 bg-blend-multiply flex-1 relative">
           <div className="absolute inset-0 overflow-hidden">
             {videos.map((video, index) => (
@@ -64,7 +64,6 @@ export default function Page() {
               </video>
             ))}
           </div>
-
         </section>
 
         <section
@@ -108,6 +107,7 @@ export default function Page() {
           </button>
         </section>
       </div>
+
 
       <div className='relative px-4 pb-4 mx-auto h-full flex flex-col justify-center items-center text-black bg-white'>
         <h2 className='z-5 mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl lg:text-6xl text-black'>Constructora Pedro</h2>

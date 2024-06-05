@@ -2,18 +2,19 @@ import React from 'react';
 import { GlobalData } from '../lib/types';
 import Link from 'next/link';
 
-export default function Header({ name }: { name: GlobalData }): JSX.Element {
+export default function Header({ name, children }: { name: GlobalData, children: React.ReactNode }): JSX.Element {
   return (
     <header className="bg-white bg-opacity-80 backdrop-blur-lg fixed top-0 w-full z-10 shadow-md rounded-b-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div className="flex lg:flex-1">
         </div>
-        <div className="flex gap-x-8">
-          <Link href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:text-white">Inicio</Link>
-          <Link href="/blog" className="text-sm font-semibold leading-6 text-gray-900 hover:text-white">Blog</Link>
-          <Link href="/area_legal" className="text-sm font-semibold leading-6 text-gray-900 hover:text-white">Area Legal</Link>
-          <Link href="/noticias" className="text-sm font-semibold leading-6 text-gray-900 hover:text-white">Noticias</Link>
-          <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900 hover:text-white">Acerca de</Link>
+        <div className="flex sm:gap-x-8 gap-x-3">
+          <Link href="/" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-400">Inicio</Link>
+          <Link href="/blog" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-400">Blog</Link>
+          <Link href="/area_legal" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-400">Área Legal</Link>
+          <Link href="/noticias" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-400">Noticias</Link>
+          <Link href="/about" className="text-sm font-semibold leading-6 text-gray-900 hover:text-gray-400">Acerca de</Link>
+          {children}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link href="#" className="text-gray-900 hover:text-white">
@@ -42,7 +43,6 @@ export default function Header({ name }: { name: GlobalData }): JSX.Element {
           </Link>
         </div>
       </nav>
-
     </header>
   );
 }
